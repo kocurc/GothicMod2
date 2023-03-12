@@ -1,0 +1,20 @@
+1)
+-dodanie nowego NPC
+C:\GOG Games\Gothic 2 Gold\_work\data\Scripts\Content\Story\NPC_Globals.d
+C:\GOG Games\Gothic 2 Gold\_work\data\Scripts\Content\Story\Startup.d
+
+2)
+-bohater na start ma gildię GIL_MIL (strażnik)
+
+*atrybut "guild"
+
+5)
+-Bohater znajduje się w Khorinis
+
+*Wld_InsertNpc (Mil_999_Barry		, "NW_CITY_ENTRANCE_01");
+
+8)
+-po napiciu się NPC staje się członkiem naszej gildii i doprowadza nas do gospody 'Pod Martwą Harpią"
+
+9)
+-po dotarciu automatycznie odzywa się do naszego bohatera i powiadamia go gdzie dotarli
