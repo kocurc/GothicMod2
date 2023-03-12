@@ -1,7 +1,3 @@
-2)
--bohater na start ma gildię GIL_MIL (strażnik)
--Bohater znajduje się w Khorinis
-
 8)
 -po napiciu się NPC staje się członkiem naszej gildii i doprowadza nas do gospody 'Pod Martwą Harpią"
 
