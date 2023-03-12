@@ -55,29 +55,29 @@ FUNC VOID DIA_Barry_Hello_Info()
 //*********************************************************************
 //	Info Completed
 //*********************************************************************
-INSTANCE DIA_SLD_999_Barry_Completed		(C_INFO)
+INSTANCE DIA_Barry_Completed		(C_INFO)
 {
 	npc         = SLD_999_Barry;
 	nr          = 4;
-	condition   = DIA_SLD_999_Barry_Completed_Condition;
-	information = DIA_SLD_999_Barry_Completed_Info;
+	condition   = DIA_Barry_Completed_Condition;
+	information = DIA_Barry_Completed_Info;
 	permanent   = FALSE;
 	description = "Mam napój";
 };
 
-FUNC INT DIA_SLD_999_Barry_Completed_Condition()
+FUNC INT DIA_Barry_Completed_Condition()
 {
-	if Npc_KnowsInfo(other, "DIA_Barry_Hello")
+	if Npc_KnowsInfo(other, DIA_Barry_Hello)
 		&& ((Npc_HasItems(other, ItFo_Milk) >= 1) || (Npc_HasItems(other, ItFo_Water) >= 1))
 	{
 		return TRUE;
 	};
 };
 
-FUNC VOID DIA_SLD_999_Barry_Completed_Info()
+FUNC VOID DIA_Barry_Completed_Info()
 {
-	AI_Output (other, self, "DIA_SLD_999_Barry_Completed_15_00"); //Przyniosłem Ci napój
-	AI_Output (self, other, "DIA_SLD_999_Barry_Completed_55_01"); //Oh dzięki!
+	AI_Output (other, self, "DIA_Barry_Completed_15_00"); //Przyniosłem Ci napój
+	AI_Output (self, other, "DIA_Barry_Completed_55_01"); //Oh dzięki!
 
 	if (Npc_HasItems(other, ItFo_Milk) >= 1)
 	{
@@ -94,6 +94,6 @@ FUNC VOID DIA_SLD_999_Barry_Completed_Info()
 	B_LogEntry(TOPIC_BarryDrink, "Dałem Barry'emu napój");
 	Log_SetTopicStatus(TOPIC_BarryDrink, LOG_SUCCESS);
 
-	AI_Output (self, other, "DIA_SLD_999_Barry_Completed_55_01"); //Chodź jeszcze ze mną do tawerny!
+	AI_Output (self, other, "DIA_Barry_Completed_55_01"); //Chodź jeszcze ze mną do tawerny!
 	
 };
