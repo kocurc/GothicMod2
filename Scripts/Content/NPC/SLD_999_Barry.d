@@ -1,10 +1,9 @@
-
-instance SLD_802_Buster (Npc_Default)
+instance SLD_999_Barry(Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Buster";
+	name 		= "Barry";
 	guild 		= GIL_SLD;
-	id 			= 802;
+	id 			= 999;
 	voice 		= 13;
 	flags       = 0;										//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
@@ -31,8 +30,8 @@ instance SLD_802_Buster (Npc_Default)
 	// ------ NSC-relevante Talente vergeben ------
 	B_GiveNpcTalents (self);
 	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 30); //Grenzen für Talent-Level liegen bei 30 und 60
+	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhï¿½ngig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
+	B_SetFightSkills (self, 30); //Grenzen fï¿½r Talent-Level liegen bei 30 und 60
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_802;
