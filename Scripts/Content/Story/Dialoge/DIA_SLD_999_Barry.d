@@ -1,7 +1,7 @@
 //*********************************************************************
 //	Info EXIT 
 //*********************************************************************
-INSTANCE DIA_Barry_EXIT(C_INFO)
+INSTANCE DIA_Barry_EXIT   (C_INFO)
 {
 	npc         = SLD_999_Barry;
 	nr          = 999;
@@ -24,19 +24,19 @@ FUNC VOID DIA_Barry_EXIT_Info()
 //*********************************************************************
 //	Info Hello 
 //*********************************************************************
-INSTANCE DIA_Barry_Hello(C_INFO)
+INSTANCE DIA_Barry_Hello		(C_INFO)
 {
 	npc         = SLD_999_Barry;
 	nr          = 4;
 	condition   = DIA_Barry_Hello_Condition;
 	information = DIA_Barry_Hello_Info;
 	permanent   = FALSE;
-	description = "Jak się masz?";
+	description = "Jak sie masz";
 };
 
 FUNC INT DIA_Barry_Hello_Condition()
 {
-	if (Npc_KnowsInfo(other, "DIA_Pablo_WANTED"))
+	if Npc_KnowsInfo(other, "DIA_Pablo_WANTED")
 	{
 		return TRUE;
 	};
@@ -55,7 +55,7 @@ FUNC VOID DIA_Barry_Hello_Info()
 //*********************************************************************
 //	Info Completed
 //*********************************************************************
-INSTANCE DIA_SLD_999_Barry_Completed(C_INFO)
+INSTANCE DIA_SLD_999_Barry_Completed		(C_INFO)
 {
 	npc         = SLD_999_Barry;
 	nr          = 4;
@@ -67,7 +67,7 @@ INSTANCE DIA_SLD_999_Barry_Completed(C_INFO)
 
 FUNC INT DIA_SLD_999_Barry_Completed_Condition()
 {
-	if (Npc_KnowsInfo(other, "DIA_Barry_Hello"))
+	if Npc_KnowsInfo(other, "DIA_Barry_Hello")
 		&& ((Npc_HasItems(other, ItFo_Milk) >= 1) || (Npc_HasItems(other, ItFo_Water) >= 1))
 	{
 		return TRUE;
