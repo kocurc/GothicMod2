@@ -23,7 +23,7 @@ instance SLD_999_Barry(Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Drax, BodyTex_N, ITAR_SLD_L);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Drax, BodyTex_N, ITAR_Barry);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
@@ -34,11 +34,11 @@ instance SLD_999_Barry(Npc_Default)
 	B_SetFightSkills (self, 30); //Grenzen f�r Talent-Level liegen bei 30 und 60
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_802;
+	daily_routine 		= Rtn_Start_999;
 };
 
-FUNC VOID Rtn_Start_802 ()
+FUNC VOID Rtn_Start_999 ()
 {
-	TA_Smalltalk		(07,00,21,00,"NW_BIGFARM_HUT_01");
-	TA_Sit_Bench 		(21,00,07,00,"NW_BIGFARM_HUT_BENCH_02");
+	TA_Stand_ArmsCrossed(07,00,21,00,"NW_CITY_MAINSTREET_07");
+	TA_Stand_ArmsCrossed(21,00,07,00,"NW_CITY_MAINSTREET_07");
 };
