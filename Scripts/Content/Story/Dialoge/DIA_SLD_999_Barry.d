@@ -88,7 +88,7 @@ FUNC VOID DIA_Barry_Completed_Info()
 		B_GiveInvItems(other, self, ItFo_Water, 1);
 	};
 
-	Npc_SetTrueGuild (self, hero.guild)
+	Npc_SetTrueGuild (self, hero.guild);
 	Npc_ExchangeRoutine (self, "Guide");
 
 	B_LogEntry(TOPIC_BarryDrink, "Dałem Barry'emu napoj, a on mnie jeszcze ciagnie do tawerny. Co za czlowiek!");
