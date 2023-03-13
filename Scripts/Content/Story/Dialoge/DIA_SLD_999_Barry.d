@@ -44,12 +44,12 @@ FUNC INT DIA_Barry_Hello_Condition()
 
 FUNC VOID DIA_Barry_Hello_Info()
 {
-	AI_Output (other, self, "DIA_Barry_Hello_15_00"); //Co słychać?
-	AI_Output (self, other, "DIA_Barry_Hello_55_01"); //Potrzebuję wody lub mleka. Suszy mnie...
+	AI_Output (other, self, "DIA_Barry_Hello_15_00"); //Co slychac?
+	AI_Output (self, other, "DIA_Barry_Hello_55_01"); //Potrzebuje wody lub mleka. Suszy mnie...
 
 	Log_CreateTopic(TOPIC_BarryDrink, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BarryDrink, LOG_RUNNING);
-	B_LogEntry(TOPIC_BarryDrink, "Barry potrzebuje uzupełnić elektrolity. Przyniosę mu wodę lub mleko");
+	B_LogEntry(TOPIC_BarryDrink, "Barry potrzebuje uzupełnic elektrolity. Przyniose mu wode lub mleko");
 };
 
 //*********************************************************************
@@ -62,7 +62,7 @@ INSTANCE DIA_Barry_Completed		(C_INFO)
 	condition   = DIA_Barry_Completed_Condition;
 	information = DIA_Barry_Completed_Info;
 	permanent   = FALSE;
-	description = "Mam napój";
+	description = "Mam napoj";
 };
 
 FUNC INT DIA_Barry_Completed_Condition()
@@ -76,8 +76,8 @@ FUNC INT DIA_Barry_Completed_Condition()
 
 FUNC VOID DIA_Barry_Completed_Info()
 {
-	AI_Output (other, self, "DIA_Barry_Completed_15_00"); //Przyniosłem Ci napój
-	AI_Output (self, other, "DIA_Barry_Completed_55_01"); //Oh dzięki!
+	AI_Output (other, self, "DIA_Barry_Completed_15_00"); //Przynioslem Ci napoj
+	AI_Output (self, other, "DIA_Barry_Completed_55_01"); //Oh dzieki! Ale chodz ze mna jeszcze do tawerny
 
 	if (Npc_HasItems(other, ItFo_Milk) >= 1)
 	{
@@ -88,12 +88,10 @@ FUNC VOID DIA_Barry_Completed_Info()
 		B_GiveInvItems(other, self, ItFo_Water, 1);
 	};
 
-	// Zmiana gildii na naszą
-	// Droga do tawerny
+	Npc_SetTrueGuild (self, hero.guild)
+	Npc_ExchangeRoutine (self, "Guide");
 
-	B_LogEntry(TOPIC_BarryDrink, "Dałem Barry'emu napój");
+	B_LogEntry(TOPIC_BarryDrink, "Dałem Barry'emu napoj, a on mnie jeszcze ciagnie do tawerny. Co za czlowiek!");
 	Log_SetTopicStatus(TOPIC_BarryDrink, LOG_SUCCESS);
-
-	AI_Output (self, other, "DIA_Barry_Completed_55_01"); //Chodź jeszcze ze mną do tawerny!
 	
 };

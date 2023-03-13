@@ -42,3 +42,9 @@ FUNC VOID Rtn_Start_999 ()
 	TA_Stand_ArmsCrossed(07,00,21,00,"NW_CITY_MAINSTREET_07");
 	TA_Stand_ArmsCrossed(21,00,07,00,"NW_CITY_MAINSTREET_07");
 };
+
+FUNC VOID Rtn_Guide_999 ()
+{
+	TA_Guide_Player  (08,00,20,00,"NW_TAVERNE_OUT_01"); 
+	TA_Guide_Player	 (20,00,08,00,"NW_TAVERNE_OUT_01");
+};
