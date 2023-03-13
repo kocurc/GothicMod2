@@ -172,4 +172,4 @@ const string	TOPIC_Wolf_BringCrawlerPlates	 = "Zbroja pe�zacza";
 const string	TOPIC_HelpDiegoNW		 		 = "Z�oto Diega";
 const string	TOPIC_DiegosResidence		 	 = "Sprawa Diega";
 
-const string 	TOPIC_BarryDrink				 = "Poprzedniej nocy zabalował i musi się napić";
+const string 	TOPIC_BarryDrink				 = "Poprzedniej nocy zabalowal i musi sie napic";

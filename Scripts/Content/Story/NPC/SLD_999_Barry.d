@@ -47,6 +47,6 @@ FUNC VOID Rtn_Guide_999 ()
 {
 	//TA_Guide_Player  (08,00,20,00,"NW_TAVERNE_OUT_01"); 
 	//TA_Guide_Player	 (20,00,08,00,"NW_TAVERNE_OUT_01");
-	TA_Guide_Player  (08,00,20,00,"hafen"); 
-	TA_Guide_Player	 (20,00,08,00,"hafen");
+	TA_Guide_Player  (08,00,20,00,"NW_CITY_ENTRANCE_01"); 
+	TA_Guide_Player	 (20,00,08,00,"NW_CITY_ENTRANCE_01");
 };

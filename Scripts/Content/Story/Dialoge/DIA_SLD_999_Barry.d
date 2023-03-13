@@ -90,8 +90,13 @@ FUNC VOID DIA_Barry_Completed_Info()
 
 	Npc_SetTrueGuild (self, hero.guild);
 	Npc_ExchangeRoutine (self, "Guide");
+	B_LogEntry(TOPIC_BarryDrink, "Dalem Barry'emu napoj, a on mnie jeszcze ciagnie do tawerny. Co za czlowiek!");
 
-	B_LogEntry(TOPIC_BarryDrink, "Dałem Barry'emu napoj, a on mnie jeszcze ciagnie do tawerny. Co za czlowiek!");
+	if Hlp_StrCmp(Npc_GetNearestWP(self), "NW_CITY_MAINSTREET_07")
+	{
+		AI_Output (self, other, "DIA_Barry_Completed_55_01"); //No jestesmy w koncu!
+		B_LogEntry(TOPIC_BarryDrink, "Dotarlismy do celu");
+	};
+
 	Log_SetTopicStatus(TOPIC_BarryDrink, LOG_SUCCESS);
-	
 };
