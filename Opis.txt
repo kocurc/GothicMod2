@@ -2,4 +2,6 @@
 -po napiciu się NPC staje się członkiem naszej gildii i doprowadza nas do gospody 'Pod Martwą Harpią"
 
 9)
--po dotarciu automatycznie odzywa się do naszego bohatera i powiadamia go gdzie dotarli
+-po dotarciu automatycznie odzywa się do naszego bohatera i powiadamia go gdzie dotarl
+
+10) Uruchomienie moda przed 8 i 9
