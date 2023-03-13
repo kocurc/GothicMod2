@@ -36,7 +36,7 @@ INSTANCE DIA_Barry_Hello		(C_INFO)
 
 FUNC INT DIA_Barry_Hello_Condition()
 {
-	if Npc_KnowsInfo(other, DIA_Pablo_WANTED)
+	if Npc_KnowsInfo(other, DIA_Pablo_Banditen) || Npc_KnowsInfo(other, DIA_Pablo_Perm)
 	{
 		return TRUE;
 	};
