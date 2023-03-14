@@ -49,7 +49,7 @@ FUNC VOID DIA_Barry_Hello_Info()
 
 	Log_CreateTopic(TOPIC_BarryDrink, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_BarryDrink, LOG_RUNNING);
-	B_LogEntry(TOPIC_BarryDrink, "Barry potrzebuje uzupełnic elektrolity. Przyniose mu wode lub mleko");
+	B_LogEntry(TOPIC_BarryDrink, "Barry potrzebuje uzupelnic elektrolity. Przyniose mu wode lub mleko");
 };
 
 //*********************************************************************
